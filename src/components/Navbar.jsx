@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">Bean Scene</Link>
+        <Link to="/">Foonie's</Link>
       </div>
 
       <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
