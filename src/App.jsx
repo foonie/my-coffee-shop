@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
@@ -9,8 +9,9 @@ import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
+
+    <BrowserRouter basename="/my-coffee-shop">
+       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
@@ -19,7 +20,7 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
